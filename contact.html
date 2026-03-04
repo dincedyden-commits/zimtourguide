@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="google-site-verification" content="4LSX1k1JInagKtekMC5X0IoJrwcnDhMOA2tIAHjdwhE" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Book Your Zimbabwe Tour - Contact Knowledge Tour Guide</title>
+    <meta name="description" content="Book your authentic Zimbabwe tour today! Contact Knowledge Tour Guide for personalized cultural, historical, and nature-based travel experiences.">
+    <meta name="keywords" content="book tour zimbabwe, contact tour guide, zimbabwe tour booking, travel inquiry, knowledge tours">
+    <meta name="author" content="Knowledge Tour Guide">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Book Your Zimbabwe Tour - Knowledge Tour Guide">
+    <meta property="og:description" content="Ready to explore Zimbabwe? Contact Knowledge Tour Guide to book your authentic travel experience today!">
+    <meta property="og:url" content="https://explorezimbabwe.com/contact">
+    <meta property="og:image" content="https://explorezimbabwe.com/1vic.jpeg">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Book Your Zimbabwe Tour">
+    <meta name="twitter:description" content="Contact Knowledge to book authentic Zimbabwe tours">
+    <meta name="twitter:image" content="https://explorezimbabwe.com/1vic.jpeg">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+        /* NAVBAR */
+        
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px;
+            background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+        }
+        
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            letter-spacing: 2px;
+            position: relative;
+        }
+        
+        .navbar a::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: cyan;
+            transition: 0.3s;
+        }
+        
+        .navbar a:hover::after {
+            width: 100%;
+        }
+        /* MOVING BACKGROUND */
+        /* MOVING BACKGROUND */
+        
+        .moving-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .moving-bg img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            animation: bgFade 90s infinite;
+        }
+        /* 6 seconds per image */
+        
+        .moving-bg img:nth-child(1) {
+            animation-delay: 0ms;
+        }
+        
+        .moving-bg img:nth-child(2) {
+            animation-delay: 9s;
+        }
+        
+        .moving-bg img:nth-child(3) {
+            animation-delay: 18s;
+        }
+        
+        .moving-bg img:nth-child(4) {
+            animation-delay: 27s;
+        }
+        
+        .moving-bg img:nth-child(5) {
+            animation-delay: 36s;
+        }
+        
+        .moving-bg img:nth-child(6) {
+            animation-delay: 45s;
+        }
+        
+        .moving-bg img:nth-child(7) {
+            animation-delay: 54s;
+        }
+        
+        .moving-bg img:nth-child(8) {
+            animation-delay: 63s;
+        }
+        
+        .moving-bg img:nth-child(9) {
+            animation-delay: 72s;
+        }
+        
+        .moving-bg img:nth-child(10) {
+            animation-delay: 81s;
+        }
+        
+        .moving-bg img:nth-child(11) {
+            animation-delay: 90s;
+        }
+        
+        .moving-bg img:nth-child(12) {
+            animation-delay: 99s;
+        }
+        
+        .moving-bg img:nth-child(13) {
+            animation-delay: 108s;
+        }
+        
+        .moving-bg img:nth-child(14) {
+            animation-delay: 117s;
+        }
+        
+        .moving-bg img:nth-child(15) {
+            animation-delay: 226s;
+        }
+        
+        @keyframes bgFade {
+            0% {
+                opacity: 1;
+            }
+            8% {
+                opacity: 1;
+            }
+            /* fade in */
+            40% {
+                opacity: 1;
+            }
+            /* stay */
+            48% {
+                opacity: 0;
+            }
+            /* fade out */
+            100% {
+                opacity: 0;
+            }
+        }
+        /* HEADER */
+        
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(0, 0, 0, 0.4);
+        }
+        
+        .circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #4caf50;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            font-weight: bold;
+        }
+        
+        .highlight {
+            color: #ff4b4b;
+        }
+        /* BOOKING FORM */
+        
+        .booking-section {
+            padding: 60px 20px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .booking-box {
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 30px;
+            border-radius: 18px;
+            max-width: 420px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .booking-box h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #203a43;
+        }
+        
+        .booking-box input,
+        .booking-box textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 14px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
+        
+        .booking-box input:focus,
+        .booking-box textarea:focus {
+            border-color: #2c7be5;
+            outline: none;
+            box-shadow: 0 0 6px rgba(44, 123, 229, 0.4);
+        }
+        
+        .booking-box button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(90deg, #0f2027, #2c5364);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .booking-box button:hover {
+            transform: translateY(-2px);
+        }
+        /* WHATSAPP */
+        
+        .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25d366;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            margin-top: 40px;
+        }
+        
+        .social-links {
+            margin: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 24px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        .facebook {
+            background: #1877F2;
+            color: white;
+        }
+        
+        .instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
+        }
+        
+        .tiktok {
+            background: #000000;
+            color: white;
+        }
+        
+        .whatsapp-btn {
+            background: #25d366;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <!-- BACKGROUND IMAGES -->
+    <div class="moving-bg">
+        <img src="1vic.jpeg">
+        <img src="2vic.jpeg">
+        <img src="3vic.jpeg">
+        <img src="4vic.jpeg">
+        <img src="5vic.jpeg">
+        <img src="chimoz2.jpeg">
+        <img src="chimoz3.jpeg">
+        <img src="gz1.jpeg">
+        <img src="gz2.jpeg">
+        <img src="hwange1.jpeg">
+        <img src="hwange2.jpeg">
+        <img src="nyanga1.jpeg">
+        <img src="nyanga2.jpeg">
+        <img src="nyanga3.jpeg">
+        <img src="nyanga4.jpeg">
+    </div>
+
+
+    <header>
+        <div class="circle">Zim Guide</div>
+        <h1>Explore <span class="highlight">Zimbabwe</span> 🌍 with Knowledge</h1>
+        <p>Your trusted local tour guide</p>
+        <h3>$100 car hiring per day , – you provide fuel</h3>
+    </header>
+
+    <section class="booking-section">
+        <div class="booking-box">
+            <h2>Book Your Tour 🌍</h2>
+            <form action="https://formsubmit.co/knowledgesabna@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+
+                <input type="date" name="date" required>
+                <input type="text" name="tour" placeholder="Tour Location / Type" required>
+                <textarea name="message" placeholder="Your Message"></textarea>
+                <button type="submit">submit</button>
+            </form>
+        </div>
+        <a class="whatsapp" href="https://wa.me/263774885946?text=Hello%20I%20want%20to%20book%20a%20tour" target="_blank">
+    WhatsApp Knowledge
+		
+</a>
+    </section>
+    <footer>
+        <div class="social-links">
+            <a href="https://facebook.com/knwledgesabana" target="_blank" rel="noopener noreferrer" class="facebook" title="Follow on Facebook">f</a>
+            <a href="https://instagram.com/knowledgesabana" target="_blank" rel="noopener noreferrer" class="instagram" title="Follow on Instagram">📷</a>
+            <a href="https://tiktok.com/@knowledgesabana" target="_blank" rel="noopener noreferrer" class="tiktok" title="Follow on TikTok">🎵</a>
+            <a href="https://wa.me/263774885946" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Message on WhatsApp">💬</a>
+        </div>
+        <p><i>©2026 Knowledge Sabana - Explore with Knowledge Tour Guide</i></p>
+    </footer>
+</body>
+
+
+</html>

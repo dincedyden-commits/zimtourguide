@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- SECURITY HEADERS -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; media-src 'self'; font-src 'self'; connect-src 'self' https:">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=()">
+
+    <!-- SEO Meta Tags -->
+    <title>🌐 Knowledge Tour Guide - Authentic Zimbabwe Tours & Travel Experiences</title>
+    <meta name="description" content="Explore authentic Zimbabwe with Knowledge Tour Guide. Expert-led cultural, historical, and nature tours. Book your unforgettable African adventure today!">
+    <meta name="keywords" content="Zimbabwe tours, tour guide, Victoria Falls, Great Zimbabwe, cultural tours, African travel, local tours, travel experiences, Hwange, Chimanimani">
+    <meta name="author" content="Knowledge Tour Guide">
+    <meta name="language" content="English">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Open Graph Meta Tags (Facebook, LinkedIn, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Explore Zimbabwe with Knowledge Tour Guide">
+    <meta property="og:description" content="Authentic, guided travel experiences in Zimbabwe. Discover culture, history, nature, and hidden gems with a passionate local guide.">
+    <meta property="og:url" content="https://explorezimbabwe.com/index">
+    <meta property="og:image" content="https://explorezimbabwe.com/1vic.jpeg">
+    <meta property="og:site_name" content="Knowledge Tour Guide">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Explore Zimbabwe with Knowledge Tour Guide">
+    <meta name="twitter:description" content="Authentic, guided travel experiences in Zimbabwe. Discover culture, history, nature, and hidden gems.">
+    <meta name="twitter:image" content="https://explorezimbabwe.com/1vic.jpeg">
+    <meta name="twitter:creator" content="@KnowledgeToursZW">
+
+    <!-- Mobile & App Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Knowledge Tours">
+    <meta name="theme-color" content="#2c5364">
+
+    <!-- Geographic Meta Tags -->
+    <meta name="geo.placename" content="Zimbabwe">
+    <meta name="geo.region" content="ZW">
+    <meta name="ICBM" content="-19.015438, 29.154857">
+
+    <!-- Additional SEO -->
+    <link rel="canonical" href="https://explorezimbabwe.com/index">
+    <link rel="alternate" hreflang="en" href="https://explorezimbabwe.com/index">
+    <meta name="revisit-after" content="7 days">
+    <meta name="last-modified" content="2026-01-14">
+    <meta name="google-site-verification" content="4LSX1k1JInagKtekMC5X0IoJrwcnDhMOA2tIAHjdwhE" />
+
+    <style>
+        /* GENERAL RESET */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        /* NAVBAR */
+        
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px;
+            background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        .navbar a {
+            position: relative;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            letter-spacing: 1px;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+        
+        .navbar a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0%;
+            height: 2px;
+            background: #00ffff;
+            transition: 0.3s ease;
+        }
+        
+        .navbar a:hover::after {
+            width: 100%;
+        }
+        /* VIDEO BACKGROUND */
+        
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -2;
+        }
+        /* DARK OVERLAY FOR READABILITY */
+        
+        .overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: -1;
+        }
+        /* HEADER SECTION */
+        
+        header {
+            text-align: center;
+            padding: 100 car hiring per day px 20px 40px 20px;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .highlight {
+            color: #ff4b4b;
+        }
+        
+        .circle {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: #4caf50;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            font-weight: 600;
+            text-align: center;
+            padding: 10px;
+        }
+        /* MARQUEE REPLACEMENT */
+        
+        .tagline {
+            font-size: 1.2rem;
+            color: #f7e600;
+            margin-top: 10px;
+            animation: scrollText 10s linear infinite;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+        }
+        
+        @keyframes scrollText {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        /* HERO SECTION */
+        
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 24px;
+            background: linear-gradient(90deg, #0f2027, #2c5364);
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero img {
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        /* INFO SECTION */
+        
+        .info {
+            max-width: 900px;
+            margin: 20px auto;
+            background: rgba(5, 99, 116, 0.85);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        /* WHATSAPP BUTTON */
+        
+        .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25d366;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+            z-index: 10;
+        }
+        /* FOOTER */
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            margin-top: 40px;
+        }
+        
+        .social-links {
+            margin: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 24px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        .facebook {
+            background: #1877F2;
+            color: white;
+        }
+        
+        .instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
+        }
+        
+        .tiktok {
+            background: #000000;
+            color: white;
+        }
+        
+        .whatsapp-btn {
+            background: #25d366;
+            color: white;
+        }
+        
+        .social-links {
+            margin: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 24px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        .facebook {
+            background: #1877F2;
+            color: white;
+        }
+        
+        .instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
+        }
+        
+        .tiktok {
+            background: #000000;
+            color: white;
+        }
+        
+        .whatsapp-btn {
+            background: #25d366;
+            color: white;
+        }
+        /* RESPONSIVE */
+        
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+            .circle {
+                width: 100px;
+                height: 100px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Knowledge Tour Guide",
+            "description": "Authentic Zimbabwe tour guide offering cultural, historical, and nature tours",
+            "image": "https://explorezimbabwe.com/1vic.jpeg",
+            "telephone": "+263774885946",
+            "url": "https://explorezimbabwe.com",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "ZW"
+            },
+            "sameAs": [
+                "https://wa.me/263774885946",
+                "https://facebook.com/knowledgetours",
+                "https://instagram.com/knowledgetours"
+            ],
+            "priceRange": "$100 car hiring per day ",
+            "areaServed": ["Victoria Falls", "Great Zimbabwe", "Hwange", "Chimanimani", "Nyanga"]
+        }
+    </script>
+
+    <!-- Additional Organization Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Knowledge Tour Guide",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "Customer Service",
+                "telephone": "+263774885946",
+                "email": "knwledgesabana@gmail.com"
+            },
+            "sameAs": [
+                "https://wa.me/263774885946"
+            ]
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- VIDEO BACKGROUND -->
+    <video class="video-bg" autoplay muted loop playsinline>
+        <source src="vic vid1.mp4" type="video/mp4">
+    </video>
+
+    <!-- DARK OVERLAY -->
+    <div class="overlay"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Explore <span class="highlight">Zimbabwe</span> 🌐 with Knowledge</h1>
+        <div class="circle">Zim Guide</div>
+        <div class="tagline">Your trusted local tour guide — Discover culture, history, and nature!</div>
+    </header>
+
+    <!-- INFO -->
+    <div class="info">
+        <p><b>Explore with Knowledge offers authentic, guided travel experiences led by a passionate local guide. Helping you discover culture, history, nature, and hidden gems of Zimbabwe through personalized tours designed to give you unforgettable memories.</b></p>
+    </div>
+
+    <!-- HERO / ACTION BUTTONS -->
+    <section class="hero">
+        <h2>Discover Amazing Experiences</h2>
+        <p>Authentic tours guided by Knowledge</p>
+
+        <a href="contact.html" class="btn">
+            <img src="book.gif" width="20" height="20"> Book a Tour
+        </a>
+
+        <a href="about.html" class="btn">
+            <img src="aboutt.gif" width="20" height="20"> About Knowledge Tours
+        </a>
+
+    </section>
+
+    <!-- WHATSAPP -->
+    <a class="whatsapp" href="https://wa.me/263774885946?text=Hello%20I%20want%20to%20book%20a%20tour" target="_blank">
+        WhatsApp Knowledge
+    </a>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="social-links">
+            <a href="https://facebook.com/knowledgesabana" target="_blank" rel="noopener noreferrer" class="facebook" title="Follow on Facebook">
+                <span>f</span>
+            </a>
+            <a href="https://instagram.com/knowledgesabana" target="_blank" rel="noopener noreferrer" class="instagram" title="Follow on Instagram">
+                <span>📷</span>
+            </a>
+            <a href="https://tiktok.com/@knowledgesabana" target="_blank" rel="noopener noreferrer" class="tiktok" title="Follow on TikTok">
+                <span>🎵</span>
+            </a>
+            <a href="https://wa.me/263774885946" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Message on WhatsApp">
+                <span>💬</span>
+            </a>
+        </div>
+        <p><i>©2026 Knowledge Sabana - Explore with Knowledge Tour Guide</i></p>
+    </footer>
+
+</body>
+
+</html>

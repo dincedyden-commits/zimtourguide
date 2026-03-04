@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="google-site-verification" content="4LSX1k1JInagKtekMC5X0IoJrwcnDhMOA2tIAHjdwhE" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; media-src 'self'; font-src 'self'; connect-src 'self' https:">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="permissions-policy" content="geolocation=(), microphone=(), camera=(), payment=()">
+
+    <title>Zimbabwe Image Gallery - Victoria Falls, Hwange, Great Zimbabwe | Knowledge Tours</title>
+    <meta name="description" content="Explore stunning images of Zimbabwe's top attractions: Victoria Falls, Great Zimbabwe, Hwange, Chimanimani, and Nyanga. See what awaits you with Knowledge Tour Guide.">
+    <meta name="keywords" content="zimbabwe gallery, victoria falls images, great zimbabwe photos, hwange national park, chimanimani mountains, nyanga, travel photography">
+    <meta name="author" content="Knowledge Tour Guide">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Zimbabwe Image Gallery - Knowledge Tour Guide">
+    <meta property="og:description" content="Browse stunning photography from Zimbabwe's most beautiful destinations. Discover what awaits on your African adventure.">
+    <meta property="og:url" content="https://explorezimbabwe.com/gallery">
+    <meta property="og:image" content="https://explorezimbabwe.com/1vic.jpeg">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zimbabwe Image Gallery">
+    <meta name="twitter:description" content="Beautiful photographs from Zimbabwe's top destinations">
+    <meta name="twitter:image" content="https://explorezimbabwe.com/1vic.jpeg">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            color: white;
+        }
+        
+        .navbar {
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+            border-radius: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            letter-spacing: 1px;
+            position: relative;
+            transition: 0.3s;
+        }
+        
+        .navbar a::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: cyan;
+            transition: 0.3s;
+        }
+        
+        .navbar a:hover::after {
+            width: 100%;
+        }
+        
+        h1 {
+            color: #00ffff;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            font-size: 32px;
+        }
+        
+        .gallery-container {
+            perspective: 1000px;
+            width: 100%;
+            max-width: 900px;
+            height: 500px;
+            position: relative;
+            margin-bottom: 40px;
+        }
+        
+        .gallery {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+        }
+        
+        .gallery img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px rgba(0, 255, 255, 0.3);
+            opacity: 0;
+            transition: all 0.6s ease-in-out;
+            transform: scale(0.8) rotateY(90deg);
+        }
+        
+        .gallery img:first-child {
+            opacity: 1;
+            transform: scale(1) rotateY(0deg);
+            z-index: 10;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            max-width: 1000px;
+            width: 100%;
+        }
+        
+        .nav-btn {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #00ffff, #0099cc);
+            color: #000;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+        }
+        
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 255, 255, 0.5);
+        }
+        
+        .nav-arrow {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #ff6b6b, #ff8787);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+        
+        .nav-arrow:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+        }
+        
+        .nav-arrow:active {
+            transform: translateY(0);
+        }
+        
+        .info {
+            color: #00ffff;
+            text-align: center;
+            font-size: 14px;
+            margin: 30px 0;
+            padding: 15px;
+            background: rgba(0, 255, 255, 0.1);
+            border-radius: 6px;
+            max-width: 900px;
+        }
+        
+        .song-section {
+            text-align: center;
+            margin: 40px 0;
+            max-width: 600px;
+        }
+        
+        .listen-btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, #ff6b6b, #ff8787);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+            margin-bottom: 20px;
+        }
+        
+        .listen-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+        }
+        
+        .listen-btn:active {
+            transform: translateY(-1px);
+        }
+        
+        .audio-player-container {
+            display: none;
+            background: rgba(0, 255, 255, 0.1);
+            border: 2px solid #00ffff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 8px 25px rgba(0, 255, 255, 0.3);
+            animation: slideIn 0.3s ease-out;
+        }
+        
+        .audio-player-container.active {
+            display: block;
+        }
+        
+        .audio-player-container h3 {
+            color: #00ffff;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .audio-player-container audio {
+            width: 100%;
+            max-width: 500px;
+            height: 40px;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            margin-top: 40px;
+            width: 100%;
+        }
+        
+        .social-links {
+            margin: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 20px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        .facebook {
+            background: #1877F2;
+            color: white;
+        }
+        
+        .instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
+        }
+        
+        .tiktok {
+            background: #000000;
+            color: white;
+        }
+        
+        .whatsapp-btn {
+            background: #25d366;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-container {
+                height: 300px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            .navbar {
+                gap: 20px;
+            }
+            .controls {
+                flex-direction: column;
+            }
+            .nav-btn,
+            .nav-arrow {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="Home.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <h1>🌍 Explore Zimbabwe with Knowledge Gallery</h1>
+
+    <div class="gallery-container">
+        <div class="gallery">
+            <!-- Victoria Falls Images -->
+            <img src="1vic.jpeg" id="img1" alt="Victoria Falls 1">
+            <img src="2vic.jpeg" id="img2" alt="Victoria Falls 2">
+            <img src="3vic.jpeg" id="img3" alt="Victoria Falls 3">
+            <img src="4vic.jpeg" id="img4" alt="Victoria Falls 4">
+            <img src="5vic.jpeg" id="img5" alt="Victoria Falls 5">
+            <!-- Chimanimani Images -->
+            <img src="chimoz2.jpeg" id="img6" alt="Chimanimani 2">
+            <img src="chimoz3.jpeg" id="img7" alt="Chimanimani 3">
+            <!-- Great Zimbabwe Images -->
+            <img src="gz1.jpeg" id="img8" alt="Great Zimbabwe 1">
+            <img src="gz2.jpeg" id="img9" alt="Great Zimbabwe 2">
+            <!-- Hwange National Park Images -->
+            <img src="hwange1.jpeg" id="img10" alt="Hwange 1">
+            <img src="hwange2.jpeg" id="img11" alt="Hwange 2">
+            <!-- Nyanga Images -->
+            <img src="nyanga1.jpeg" id="img12" alt="Nyanga 1">
+            <img src="nyanga2.jpeg" id="img13" alt="Nyanga 2">
+            <img src="nyanga3.jpeg" id="img14" alt="Nyanga 3">
+            <img src="nyanga4.jpeg" id="img15" alt="Nyanga 4">
+        </div>
+    </div>
+
+    <div class="controls">
+        <a href="gallery.html" class="nav-btn" onclick="showCategory(1); return false;">🏞️ Victoria Falls</a>
+        <a href="gallery.html" class="nav-btn" onclick="showCategory(6); return false;">⛰️ Chimanimani</a>
+        <a href="gallery.html" class="nav-btn" onclick="showCategory(8); return false;">🏛️ Great Zimbabwe</a>
+        <a href="gallery.html" class="nav-btn" onclick="showCategory(10); return false;">🦁 Hwange</a>
+        <a href="gallery.html" class="nav-btn" onclick="showCategory(12); return false;">🌄 Nyanga</a>
+        <button id="prevBtn" class="nav-arrow">⬅️ Previous</button>
+        <button id="nextBtn" class="nav-arrow">Next ➡️</button>
+    </div>
+
+    <div class="info">
+        <p>✨ <strong>Explore with us and we will add your experience with us here</strong></p>
+    </div>
+
+    <!-- SONG SECTION -->
+    <div class="song-section">
+        <button class="listen-btn" onclick="toggleAudioPlayer()">🎵 THE song for the wonders and beauty of Chimanimani while Kwoledge is the MC</button>
+        <div class="audio-player-container" id="audioContainer">
+            <h3>🎶 Knowledge's Song - Friends Edition 🎶</h3>
+            <audio controls>
+                <source src="knowledge_song.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+    <script>
+        // Gallery variables
+        let currentImageIndex = 1;
+        const totalImages = 15;
+        const rotationInterval = 4000;
+        let autoRotateTimer = null;
+
+        // Initialize gallery
+        function initGallery() {
+            showImage(currentImageIndex);
+            startAutoRotate();
+        }
+
+        // Show specific image
+        function showImage(index) {
+            // Validate index
+            if (index < 1) {
+                index = totalImages;
+            } else if (index > totalImages) {
+                index = 1;
+            }
+            currentImageIndex = index;
+
+            // Hide all images
+            for (let i = 1; i <= totalImages; i++) {
+                const img = document.getElementById('img' + i);
+                if (img) {
+                    img.style.opacity = '0';
+                    img.style.transform = 'scale(0.8) rotateY(90deg)';
+                    img.style.zIndex = '0';
+                }
+            }
+
+            // Show current image
+            const img = document.getElementById('img' + index);
+            if (img) {
+                img.style.opacity = '1';
+                img.style.transform = 'scale(1) rotateY(0deg)';
+                img.style.zIndex = '10';
+            }
+        }
+
+        // Auto-rotate images
+        function rotateImage() {
+            currentImageIndex++;
+            if (currentImageIndex > totalImages) {
+                currentImageIndex = 1;
+            }
+            showImage(currentImageIndex);
+        }
+
+        // Start auto-rotation
+        function startAutoRotate() {
+            if (autoRotateTimer) {
+                clearInterval(autoRotateTimer);
+            }
+            autoRotateTimer = setInterval(rotateImage, rotationInterval);
+        }
+
+        // Stop auto-rotation
+        function stopAutoRotate() {
+            if (autoRotateTimer) {
+                clearInterval(autoRotateTimer);
+            }
+        }
+
+        // Navigate to next image
+        function nextImage() {
+            stopAutoRotate();
+            currentImageIndex++;
+            if (currentImageIndex > totalImages) {
+                currentImageIndex = 1;
+            }
+            showImage(currentImageIndex);
+            startAutoRotate();
+        }
+
+        // Navigate to previous image
+        function prevImage() {
+            stopAutoRotate();
+            currentImageIndex--;
+            if (currentImageIndex < 1) {
+                currentImageIndex = totalImages;
+            }
+            showImage(currentImageIndex);
+            startAutoRotate();
+        }
+
+        // Show specific category
+        function showCategory(startIndex) {
+            stopAutoRotate();
+            currentImageIndex = startIndex;
+            showImage(currentImageIndex);
+            startAutoRotate();
+        }
+
+        // Toggle audio player
+        function toggleAudioPlayer() {
+            const container = document.getElementById('audioContainer');
+            if (container) {
+                container.classList.toggle('active');
+            }
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            initGallery();
+
+            // Next/Previous buttons
+            const nextBtn = document.getElementById('nextBtn');
+            const prevBtn = document.getElementById('prevBtn');
+            if (nextBtn) nextBtn.addEventListener('click', nextImage);
+            if (prevBtn) prevBtn.addEventListener('click', prevImage);
+
+            // Keyboard navigation
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'ArrowRight') {
+                    nextImage();
+                } else if (event.key === 'ArrowLeft') {
+                    prevImage();
+                }
+            });
+        });
+    </script>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://facebook.com/knowledgesabana" target="_blank" rel="noopener noreferrer" class="facebook" title="Follow on Facebook">f</a>
+            <a href="https://instagram.com/knowledgesabana" target="_blank" rel="noopener noreferrer" class="instagram" title="Follow on Instagram">📷</a>
+            <a href="https://tiktok.com/@knowledgesabana" target="_blank" rel="noopener noreferrer" class="tiktok" title="Follow on TikTok">🎵</a>
+            <a href="https://wa.me/263774885946" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Message on WhatsApp">💬</a>
+        </div>
+        <p><i>©2026 Knowledge Sabana - Explore with Knowledge Tour Guide</i></p>
+    </footer>
+
+</body>
+
+</html>
